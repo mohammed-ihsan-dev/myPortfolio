@@ -50,7 +50,7 @@ export function ContactForm() {
       <div className="flex items-center justify-between px-4 py-3 bg-zinc-950 border-b border-zinc-850/80 text-[11px] font-mono text-zinc-400">
         <div className="flex items-center gap-2">
           <Terminal className="w-3.5 h-3.5 text-emerald-500" />
-          <span>contact_handler.sh</span>
+          <span>Send a Message</span>
         </div>
         <div className="flex gap-1">
           <span className="w-2 h-2 rounded-full bg-red-500/60" />
@@ -65,16 +65,16 @@ export function ContactForm() {
             <div className="inline-flex p-3 rounded-full bg-emerald-500/10 text-emerald-500">
               <CheckCircle2 className="w-8 h-8" />
             </div>
-            <h4 className="text-sm font-semibold text-zinc-200 font-mono">Transmission Complete</h4>
+            <h4 className="text-sm font-semibold text-zinc-200 font-mono">Message Sent</h4>
             <p className="text-xs text-zinc-400 max-w-sm mx-auto leading-relaxed">
-              Your message was packetized and delivered. Mohammed Ihsan will process your request shortly.
+              Your message has been delivered successfully. Mohammed Ihsan will get back to you shortly.
             </p>
             <Button
               onClick={() => setStatus("idle")}
               variant="outline"
               className="mt-2 text-xs border-zinc-800 hover:bg-zinc-900/60 hover:text-zinc-100 font-mono"
             >
-              Send Another Packet
+              Send Another Message
             </Button>
           </div>
         ) : (
@@ -82,16 +82,16 @@ export function ContactForm() {
             {/* Input field: Name */}
             <div className="space-y-1.5">
               <label htmlFor="name" className="text-zinc-400 block text-[10px] uppercase tracking-wider font-semibold">
-                Sender Name
+                Full Name
               </label>
               <Input
                 id="name"
                 type="text"
-                placeholder="e.g., Jane Doe"
+                placeholder="e.g., John Smith"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 disabled={status === "submitting"}
-                className={`bg-zinc-900/40 border-zinc-800 focus-visible:ring-1 focus-visible:ring-zinc-600 focus-visible:border-zinc-700 text-zinc-200 placeholder:text-zinc-600 text-xs ${
+                className={`bg-zinc-900/40 border-zinc-800 focus-visible:ring-1 focus-visible:ring-zinc-600 focus-visible:border-zinc-700 text-zinc-200 placeholder:text-zinc-650 text-xs ${
                   errors.name ? "border-red-900/60 focus-visible:ring-red-950" : ""
                 }`}
               />
@@ -106,16 +106,16 @@ export function ContactForm() {
             {/* Input field: Email */}
             <div className="space-y-1.5">
               <label htmlFor="email" className="text-zinc-400 block text-[10px] uppercase tracking-wider font-semibold">
-                Return Path (Email)
+                Email Address
               </label>
               <Input
                 id="email"
                 type="email"
-                placeholder="e.g., jane@company.com"
+                placeholder="e.g., john.smith@company.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 disabled={status === "submitting"}
-                className={`bg-zinc-900/40 border-zinc-800 focus-visible:ring-1 focus-visible:ring-zinc-600 focus-visible:border-zinc-700 text-zinc-200 placeholder:text-zinc-600 text-xs ${
+                className={`bg-zinc-900/40 border-zinc-800 focus-visible:ring-1 focus-visible:ring-zinc-600 focus-visible:border-zinc-700 text-zinc-200 placeholder:text-zinc-650 text-xs ${
                   errors.email ? "border-red-900/60 focus-visible:ring-red-950" : ""
                 }`}
               />
@@ -130,16 +130,16 @@ export function ContactForm() {
             {/* Textarea field: Message */}
             <div className="space-y-1.5">
               <label htmlFor="message" className="text-zinc-400 block text-[10px] uppercase tracking-wider font-semibold">
-                Payload (Message)
+                Project Details
               </label>
               <Textarea
                 id="message"
-                placeholder="Describe your project, timeline, or engineering opportunity..."
+                placeholder="Tell me about your project, timeline, requirements, or how I can help..."
                 rows={4}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 disabled={status === "submitting"}
-                className={`bg-zinc-900/40 border-zinc-800 focus-visible:ring-1 focus-visible:ring-zinc-600 focus-visible:border-zinc-700 text-zinc-200 placeholder:text-zinc-600 text-xs leading-relaxed ${
+                className={`bg-zinc-900/40 border-zinc-800 focus-visible:ring-1 focus-visible:ring-zinc-600 focus-visible:border-zinc-700 text-zinc-200 placeholder:text-zinc-650 text-xs leading-relaxed ${
                   errors.message ? "border-red-900/60 focus-visible:ring-red-950" : ""
                 }`}
               />
@@ -154,7 +154,7 @@ export function ContactForm() {
             {status === "error" && (
               <div className="p-3 bg-red-950/20 border border-red-900/30 rounded text-red-400 flex items-center gap-2">
                 <AlertCircle className="w-4 h-4 shrink-0" />
-                <span>Error packaging payload. Please try again.</span>
+                <span>Error sending message. Please try again.</span>
               </div>
             )}
 
@@ -166,12 +166,12 @@ export function ContactForm() {
               {status === "submitting" ? (
                 <>
                   <span className="w-3.5 h-3.5 border-2 border-zinc-950 border-t-transparent rounded-full animate-spin" />
-                  <span>Transmitting Payload...</span>
+                  <span>Sending Message...</span>
                 </>
               ) : (
                 <>
                   <Send className="w-3.5 h-3.5" />
-                  <span>Transmit Message</span>
+                  <span>Send Message</span>
                 </>
               )}
             </Button>

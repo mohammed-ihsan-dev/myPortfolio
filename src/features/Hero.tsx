@@ -171,14 +171,14 @@ export function Hero() {
           >
             <a
               href="#projects"
-              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 text-xs font-mono font-bold uppercase tracking-wider transition-all active:scale-[0.97]"
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full bg-emerald-500 hover:bg-emerald-400 text-zinc-950 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ease-out hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>View Projects</span>
               <ArrowRight className="w-4 h-4" />
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-zinc-100 text-xs font-mono font-bold uppercase tracking-wider transition-all"
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-zinc-100 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ease-out hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>Let&apos;s Talk</span>
               <MessageCircle className="w-4 h-4" />
@@ -187,7 +187,7 @@ export function Hero() {
               href={profile.resumeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-zinc-100 text-xs font-mono font-bold uppercase tracking-wider transition-all"
+              className="inline-flex items-center gap-2.5 px-6 py-3 rounded-full border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-zinc-100 text-xs font-mono font-bold uppercase tracking-wider transition-all duration-300 ease-out hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>Resume</span>
               <Download className="w-4 h-4" />

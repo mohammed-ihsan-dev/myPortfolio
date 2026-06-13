@@ -21,12 +21,12 @@ export function About() {
           <div className="lg:col-span-6 relative w-full h-[500px] sm:h-[620px] flex items-center justify-center">
             
             {/* Background Accent Glass Card */}
-            <div className="absolute top-4 left-4 w-[88%] h-[88%] rounded-3xl border border-white/5 bg-zinc-900/10 backdrop-blur-sm pointer-events-none" />
+            <div className="absolute top-3.5 left-3.5 w-[96%] h-[96%] rounded-3xl border border-white/5 bg-zinc-900/10 backdrop-blur-sm pointer-events-none" />
             
             {/* Main Foreground Editorial Card containing cutout */}
             <motion.div 
               whileHover={{ y: -6, transition: { duration: 0.3 } }}
-              className="relative w-[88%] h-[88%] rounded-3xl border border-white/10 shadow-2xl bg-zinc-900/30 group flex items-end justify-center cursor-pointer"
+              className="relative w-[96%] h-[96%] rounded-3xl border border-white/10 shadow-2xl bg-zinc-900/30 group flex items-end justify-center cursor-pointer"
             >
               {/* Card background content (Clipped inside rounded frame) */}
               <div className="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none">
@@ -37,8 +37,8 @@ export function About() {
               </div>
               
               {!imageError ? (
-                // This wrapper has height 110% to allow the portrait to scale up and overlap the card's top edge
-                <div className="absolute -bottom-1 w-[90%] h-[110%] z-10 pointer-events-none">
+                // This wrapper has height 115% to allow the portrait to scale up and overlap the card's top edge
+                <div className="absolute -bottom-1 w-[95%] h-[115%] z-10 pointer-events-none">
                   <Image
                     src="/BgRemovedDP.png"
                     alt="Mohammed Ihsan Editorial Portrait"

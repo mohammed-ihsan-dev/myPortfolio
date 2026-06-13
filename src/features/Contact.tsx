@@ -18,7 +18,7 @@ export function Contact() {
       <div className="absolute bottom-[-10%] right-[5%] w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[110px] pointer-events-none" />
 
       <div className="max-w-[1600px] w-full mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
           
           {/* Left Column: Massive Headline, coordinates & branding stamp */}
           <div className="lg:col-span-6 space-y-8 text-left max-w-xl">
@@ -32,14 +32,15 @@ export function Contact() {
 
               {/* Personal Stamp Header (Small photo stamp / monogram) */}
               <div className="flex items-center gap-3.5 pt-2">
-                <div className="relative w-16 h-16 rounded-2xl overflow-hidden border border-zinc-855 bg-zinc-900 flex items-center justify-center shrink-0 shadow-lg">
+                <div className="relative w-20 h-20 rounded-2xl overflow-hidden border border-zinc-800 bg-zinc-900 flex items-center justify-center shrink-0 shadow-xl group/stamp cursor-pointer transition-all duration-300 hover:border-emerald-500/30">
+                  <div className="absolute inset-0 bg-dots-zinc opacity-10" />
                   {!imageError ? (
                     <Image
                       src="/BgRemovedDP.png"
                       alt="Mohammed Ihsan Stamp"
                       fill
-                      sizes="64px"
-                      className="object-contain opacity-90 filter contrast-[1.05]"
+                      sizes="80px"
+                      className="object-contain opacity-95 filter contrast-[1.05]"
                       onError={() => setImageError(true)}
                     />
                   ) : (
@@ -78,27 +79,27 @@ export function Contact() {
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                 <a
                   href={`mailto:${profile.email}`}
-                  className="flex items-center justify-center gap-3 p-4 rounded-xl bg-zinc-900/10 border border-zinc-900 hover:border-zinc-800 hover:text-zinc-200 transition group text-center"
+                  className="flex items-center justify-center gap-3 p-4 rounded-xl bg-zinc-900/10 border border-zinc-900 hover:border-red-500/40 hover:bg-gradient-to-r hover:from-red-950/10 hover:via-blue-950/10 hover:to-emerald-950/10 hover:text-red-400 transition-all duration-300 ease-out group text-center"
                 >
-                  <Mail className="w-5 h-5 text-zinc-550 group-hover:text-emerald-450 transition" />
+                  <Mail className="w-5 h-5 text-zinc-550 group-hover:text-red-400 transition-colors duration-300" />
                   <span className="text-xs uppercase font-bold tracking-wider">Email</span>
                 </a>
                 <a
                   href={profile.socials.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 p-4 rounded-xl bg-zinc-900/10 border border-zinc-900 hover:border-zinc-800 hover:text-zinc-200 transition group text-center"
+                  className="flex items-center justify-center gap-3 p-4 rounded-xl bg-zinc-900/10 border border-zinc-900 hover:border-purple-500/40 hover:bg-zinc-900/50 hover:text-purple-400 transition-all duration-300 ease-out group text-center"
                 >
-                  <GithubIcon className="w-5 h-5 text-zinc-555 group-hover:text-zinc-300 transition" />
+                  <GithubIcon className="w-5 h-5 text-zinc-555 group-hover:text-purple-400 transition-colors duration-300" />
                   <span className="text-xs uppercase font-bold tracking-wider">GitHub</span>
                 </a>
                 <a
                   href={profile.socials.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 p-4 rounded-xl bg-zinc-900/10 border border-zinc-900 hover:border-zinc-800 hover:text-zinc-200 transition group text-center"
+                  className="flex items-center justify-center gap-3 p-4 rounded-xl bg-zinc-900/10 border border-zinc-900 hover:border-blue-500/40 hover:bg-blue-950/10 hover:text-blue-400 hover:shadow-[0_0_15px_rgba(10,102,194,0.15)] transition-all duration-300 ease-out group text-center"
                 >
-                  <LinkedinIcon className="w-5 h-5 text-zinc-555 group-hover:text-emerald-450 transition" />
+                  <LinkedinIcon className="w-5 h-5 text-zinc-555 group-hover:text-blue-450 transition-colors duration-300" />
                   <span className="text-xs uppercase font-bold tracking-wider">LinkedIn</span>
                 </a>
               </div>
