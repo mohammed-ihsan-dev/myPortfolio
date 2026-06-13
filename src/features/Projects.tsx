@@ -98,7 +98,7 @@ export function Projects() {
                   <div className="flex-1 min-h-[400px] relative rounded-3xl bg-zinc-900/10 border border-zinc-900 overflow-hidden shadow-2xl backdrop-blur-sm flex flex-col justify-center">
                     {currentView === "mockup" ? (
                       // Mockup View: Cinematic screenshot or gradient fallback
-                      <div className="absolute inset-0 select-none h-full w-full relative">
+                      <div className="absolute inset-0 select-none">
                         {projectThumbnails[project.id] ? (
                           <div className="relative w-full h-full overflow-hidden group/thumb">
                             {/* Subtle dark gradient overlay to ensure text/controls have breathing room */}
