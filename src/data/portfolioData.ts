@@ -11,7 +11,7 @@ export const profile = {
     twitter: "https://x.com/itsihsaney?s=21",
     instagram: "https://instagram.com/_ihsaney",
   },
-  resumeUrl: "/Mohammed_Ihsan_Resume.pdf",
+  resumeUrl: "/resume/mohammed_ihsan_cv.pdf",
   hero: {
     badge: "Open to Opportunities",
     headline: "DESIGNING\nAND ENGINEERING\nDIGITAL PRODUCTS\nTHAT SCALE",
